@@ -3,8 +3,10 @@ import { Heading } from "components/Heading";
 import { Img } from "components/Img";
 import Searchbar from "components/Searchbar";
 import { Text } from "components/Text";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "contexts/UserContext";
+
 
 const Headers = () => {
   return (
@@ -56,9 +58,11 @@ const Headers = () => {
                     className="h-8 w-8 "
                   />
                 </Link>
+                <Link to="/register">
                 <Button size="5xl" className="font-bold min-w-[107px]">
                   Login
                 </Button>
+                </Link>
               </div>
             </div>
           </div>
