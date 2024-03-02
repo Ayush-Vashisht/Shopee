@@ -13,7 +13,7 @@ import NewArrivals from "pages/NewArrivals";
 import Features from "pages/Features/Index";
 import { UserContextProvider } from "contexts/UserContext";
 
-// axios.defaults.baseURL="http://localhost:5000/";
+axios.defaults.baseURL="http://localhost:5000/";
 axios.defaults.withCredentials = true;
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
           <Route path="/" element={<HomepageVOnePage />} />
           <Route path="/collections" element={<ProductListPage />} />
           <Route path="/productdetails" element={<ProductDetailsPage />} />
+          <Route path="/productlist" element={<ProductListPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/categories" element={<CategorieswithSidebar />} />

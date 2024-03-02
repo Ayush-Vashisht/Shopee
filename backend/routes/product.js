@@ -3,10 +3,13 @@ const express = require("express");
 const Product = require("../models/product");
 const router = express.Router();
 
-router.get("/",(req,res)=>{
+router.get("/", (req, res) => {
   res.json("ok");
-})
-
+});
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  res.json(await Product.findById(id));
+});
 router.get("/:category", async (req, res) => {
   console.log(req.params.category);
   const { category } = req.params;

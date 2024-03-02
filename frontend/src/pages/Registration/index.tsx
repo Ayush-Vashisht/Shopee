@@ -12,7 +12,7 @@ export default function RegisterPage() {
   async function userRegister(ev) {
     ev.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/v1/user/signup", {
+      await axios.post("/api/v1/user/signup", {
         firstName,
         lastName,
         username:email,
@@ -81,7 +81,7 @@ export default function RegisterPage() {
             </div>
             <div className="text-xs text-center">
               <span>Already a member? </span>
-              <Link to={"/login"} className="">
+              <Link to={"/signin"} className="">
                 Log in
               </Link>
             </div>

@@ -103,7 +103,7 @@ export default function HomepageVOnePage() {
               </div>
             </div>
             <div className="flex flex-row w-full gap-8">
-              <div className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50">
+              <Link to="/productlist/jacket" className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50">
                 <Img
                   src="images/img_sweater.svg"
                   alt="jacket_one"
@@ -112,8 +112,8 @@ export default function HomepageVOnePage() {
                 <Text as="p" className="mb-2.5">
                   Jacket
                 </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50">
+              </Link>
+              <Link to="/productlist/shirt"  className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50">
                 <Img
                   src="images/img_tshirt.svg"
                   alt="tshirt_one"
@@ -122,8 +122,8 @@ export default function HomepageVOnePage() {
                 <Text as="p" className="mb-2.5">
                   Shirt
                 </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[16%] gap-2 p-9 bg-gray-50">
+              </Link>
+              <Link to="/productlist/pants"  className="flex flex-col items-center justify-start w-[16%] gap-2 p-9 bg-gray-50">
                 <Img
                   src="images/img_pants.svg"
                   alt="pants_one"
@@ -132,18 +132,19 @@ export default function HomepageVOnePage() {
                 <Text as="p" className="mb-[9px]">
                   Pants
                 </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-800">
+              </Link>
+              <Link to="/productlist/shoes"  className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50 hover:bg-gray-800">
                 <Img
-                  src="images/img_boot.svg"
+                  src="images/img_boot_gray_800.svg"
                   alt="boot_one"
-                  className="h-24 w-24"
+                  className="h-24 w-24 object-cover  hover:opacity-0"
                 />
-                <Text as="p" className="mb-2.5 !text-white-A700">
+                
+                <Text as="p" className="mb-2.5 hover:!text-white-A700">
                   Shoes
                 </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[16%] gap-2 p-9 bg-gray-50">
+              </Link>
+              <Link to="/productlist/dress"  className="flex flex-col items-center justify-start w-[16%] gap-2 p-9 bg-gray-50">
                 <Img
                   src="images/img_dress.svg"
                   alt="dress_one"
@@ -152,8 +153,8 @@ export default function HomepageVOnePage() {
                 <Text as="p" className="mb-[9px]">
                   Dress
                 </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50">
+              </Link>
+              <Link to="/productlist/accesories"  className="flex flex-col items-center justify-start w-[16%] gap-[7px] p-9 bg-gray-50">
                 <Img
                   src="images/img_belt.svg"
                   alt="belt_one"
@@ -162,7 +163,7 @@ export default function HomepageVOnePage() {
                 <Text as="p" className="mb-2.5">
                   Accesories
                 </Text>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex flex-row justify-center w-full mt-[98px] max-w-[1632px]">

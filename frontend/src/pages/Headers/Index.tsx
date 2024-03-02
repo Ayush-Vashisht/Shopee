@@ -13,7 +13,7 @@ const Headers = () => {
     <div className="flex  items-center justify-start w-full bg-white-A700">
       <header className="flex justify-center items-center w-full p-[17px] bg-white-A700">
         <div className="flex flex-row justify-between items-center w-full mx-auto max-w-[1632px]">
-          <div className="flex flex-row justify-start items-start gap-2">
+          <Link to ="/" className="flex flex-row justify-start items-start gap-2">
             <Img
               src="images/img_group_19.svg"
               alt="image"
@@ -22,7 +22,7 @@ const Headers = () => {
             <Heading as="h4" className="!text-gray-800">
               EzShopee{" "}
             </Heading>
-          </div>
+          </Link>
           <div className="flex flex-row justify-between items-center w-[70%]">
             <div className="flex flex-row justify-between w-auto gap-20">
               <Link to="/categories">

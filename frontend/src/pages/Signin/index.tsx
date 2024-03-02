@@ -11,7 +11,7 @@ export default function LoginPage() {
     ev.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/v1/user/signin",
+        "/api/v1/user/signin",
         {
           username:email,
           password,
