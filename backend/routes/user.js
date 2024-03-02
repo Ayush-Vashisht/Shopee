@@ -81,8 +81,9 @@ router.post("/signin", async (req, res) => {
         },
         JWT_SECRET
       );
-      res.cookie("token", token).json("pass ok");
-    //   res.json({ token: token });
+      console.log();
+      res.cookie("token", token).json({ token: token });
+      //   res.json({ token: token });
       return;
     }
 
@@ -91,6 +92,22 @@ router.post("/signin", async (req, res) => {
     });
   } catch (error) {
     console.error(error.message);
+  }
+});
+
+router.get("/profile", async (req, res) => {
+  const { token } = req.cookies;
+  if (token) {
+    jwt.verify(token, JWT_SECRET, {}, async (err, userData) => {
+      if (err) throw err;
+      console.log(userData);
+      const { username, firstName, lastName, id } = await User.findById(
+        userData.userId
+      );
+      res.json({ username, firstName, lastName, id });
+    });
+  } else {
+    res.json(null);
   }
 });
 
